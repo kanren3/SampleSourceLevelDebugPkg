@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "EDK Build",
+            "type": "shell",
+            "command": "${workspaceFolder}/../edksetup.bat & build -p ${workspaceFolder}/SampleSourceLevelDebugPkg.dsc -t CLANGDWARF -a X64 -b DEBUG",
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": ["/c"]
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+  }

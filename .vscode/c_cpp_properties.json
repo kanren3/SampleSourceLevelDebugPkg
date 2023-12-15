@@ -1,0 +1,17 @@
+{
+    "configurations": [
+      {
+        "name": "Windows General",
+        "compilerPath": "C:/Program Files/LLVM/bin/clang.exe",
+        "intelliSenseMode": "windows-clang-x64",
+        "includePath": [
+            "${workspaceFolder}/../MdePkg/Include/",
+            "${workspaceFolder}/../MdePkg/Include/X64"
+        ],
+        "cStandard": "c99",
+        "cppStandard": "c++20"
+      }
+    ],
+    "version": 4,
+    "enableConfigurationSquiggles": true
+  }

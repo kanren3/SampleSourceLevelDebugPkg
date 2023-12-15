@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Attach to gdbserver",
+        "type": "cppdbg",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "program": "D:/repo/native/edk2/SampleSourceLevelDebugPkg/Build/NOOPT_CLANGDWARF/X64/SampleSourceLevelDebug.debug",
+        "MIMode": "gdb",
+        "stopAtConnect": true,
+        "miDebuggerPath": "C:/Program Files/gdb/bin/gdb-dis-tlb.exe",
+        "targetArchitecture": "x86_64",
+        "serverStarted": "",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          },
+          {
+            "description": "Set disassembly flavor to Intel",
+            "text": "-gdb-set disassembly-flavor intel",
+            "ignoreFailures": true
+          },
+          {
+            "description": "Connect gdbserver",
+            "text": "target remote 127.0.0.1:8864",
+            "ignoreFailures": false
+          },
+          {
+            "description": "Query program info",
+            "text": "info program",
+            "ignoreFailures": false
+          },
+          {
+            "description": "Load image symbols",
+            "text": "source ${workspaceFolder}/SampleSourceLevelDebugPkg.py",
+            "ignoreFailures": false
+          }
+        ]
+      }
+    ]
+  }

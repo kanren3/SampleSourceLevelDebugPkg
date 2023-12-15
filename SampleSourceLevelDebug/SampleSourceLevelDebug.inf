@@ -1,0 +1,29 @@
+[Defines]
+  INF_VERSION                    = 1.27
+  BASE_NAME                      = SampleSourceLevelDebug
+  FILE_GUID                      = 0BCFDDA8-929C-415B-B4ED-83766F50D869
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+  UNLOAD_IMAGE                   = UefiUnload
+
+[Sources]
+  SampleSourceLevelDebug.c
+  WaitDebugger.nasm
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  DevicePathLib
+
+[Protocols]
+  gEfiLoadedImageProtocolGuid                      ## CONSUMES
+
+[Guids]
+  gEfiEventExitBootServicesGuid                    ## CONSUMES
+
+[Depex]
+  TRUE

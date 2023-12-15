@@ -1,0 +1,5 @@
+[Defines]
+  DEC_SPECIFICATION              = 0x00010006
+  PACKAGE_NAME                   = SampleSourceLevelDebugPkg
+  PACKAGE_GUID                   = D195D0C2-64A0-4273-CFAE-E4EC0309140C
+  PACKAGE_VERSION                = 1.02
